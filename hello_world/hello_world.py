@@ -6,8 +6,8 @@ class MyProgram:
         self.message = "Hello World"
 
     def print_message (self):
-        print self.message
-        print MyProgram.message
+        print( self.message)
+        print(MyProgram.message)
 
             
         
