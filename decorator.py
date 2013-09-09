@@ -37,7 +37,7 @@ def wrap_func(func=None, other="yes"):
 
 class SubClass(DaClass):
     @classmethod
-    @wrap_func()
+    @wrap_func
     def foo(cls):
         print("In foo")
 
