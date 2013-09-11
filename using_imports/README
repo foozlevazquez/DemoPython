@@ -1,0 +1,14 @@
+
+from sqlalchemy's use:
+
+* top level __init__.py:
+
+    from sqlalchemy.<subpkg> import (
+         <list of symbols to make available>
+     )
+
+* <subpkg> __init__.py:
+
+    from sqlalchemy.<subpkg>.<module> import (
+         <list of symbols to make available>
+    )
