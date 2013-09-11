@@ -36,7 +36,7 @@ class MyDB():
             for i in range(10):
                 data = "Data-{}".format(count)
                 count += 1
-                table.insert(serverid='foo', data=data)).execute()
+                table.insert(serverid='foo', data=data).execute()
 
     @classmethod
     def do_join(cls):
