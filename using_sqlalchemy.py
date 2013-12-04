@@ -15,18 +15,24 @@ class MyDB():
     @classmethod
     def create_tables(cls):
         cls.t1 = Table('t1', cls.metadata,
-                   Column('seqid', Integer, primary_key=True,
-                          autoincrement=True),
-                   Column('serverid', String(50)),
-                   Column('data', Text),
+                       Column('seqid', Integer, primary_key=True,
+                              autoincrement=True),
+                       Column('serverid', String(50)),
+                       Column('data', Text),
                    )
         cls.t2 = Table('t2', cls.metadata,
-                   Column('seqid', Integer, primary_key=True,
-                          autoincrement=True),
-                   Column('serverid', String(50)),
-                   Column('data', Text),
-               )
+                       Column('seqid', Integer, primary_key=True,
+                              autoincrement=True),
+                       Column('serverid', String(50)),
+                       Column('data', Text),
+                   )
 
+        cls.t3 = Table('t3', cls.metadata,
+                       Column('seqid', Integer, primary_key=True,
+                              autoincrement=True),
+                       Column('name', String(50), unique=True),
+                       Column('data', Text),
+                   )
         cls.metadata.create_all()
 
     @classmethod
