@@ -3,7 +3,7 @@ import redis
 def main():
     r = redis.StrictRedis(host='localhost', port=6379, db=0)
     ps = r.pubsub()
-    ps.psubscribe('*nginx.access.log')
+    ps.psubscribe('*nginx.access*.log')
 
     while True:
         for item in ps.listen():
